@@ -33,7 +33,6 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-                        <version>1.18.12</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -66,6 +65,11 @@
 	  <artifactId>h2</artifactId>
 	  <version>2.1.212</version>
 	  <type>pom.sha512</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>maven</groupId>
+	  <artifactId>maven-plugin-plugin</artifactId>
+	  <version>1.7.1</version>
 	 </dependency>
 	</dependencies>
 
