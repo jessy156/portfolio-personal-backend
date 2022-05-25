@@ -20,23 +20,23 @@ public class ControllerSkills {
     
     @Autowired
     private ISkillsService skillServ;
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @PostMapping("/new/skill")
     public void agregarSkill(@RequestBody Skills skill){
         skillServ.crearSkill(skill);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @GetMapping ("/ver/skills")
     @ResponseBody
     public List<Skills> verSkills(){
         return skillServ.verSkills();
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @DeleteMapping("/delete/skill/{id}")
     public void borrarSkill(@PathVariable Long id){
         skillServ.borrarSkill(id);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @PutMapping("/modificar/skill")
     public void editarSkill(@RequestBody Skills skill){
         skillServ.editarSkill(skill);

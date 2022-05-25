@@ -21,23 +21,23 @@ public class ControllerExperiencia {
     @Autowired
     private IExperienciaService expServ;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @PostMapping("/new/experiencia")
     public void agregarExperiencia(@RequestBody Experiencia exp){
         expServ.crearExperiencia(exp);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @GetMapping ("/ver/Experiencias")
     @ResponseBody
     public List<Experiencia> verExperiencias(){
         return expServ.verExperiencias();
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @DeleteMapping("/delete/Experiencia/{id}")
     public void borrarExperiencia(@PathVariable Long id){
         expServ.borrarExperiencia(id);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @PutMapping("/modificar/experiencia")
     public void editarExperiencia (@RequestBody Experiencia exp){
         expServ.editarExperiencia(exp);

@@ -21,23 +21,23 @@ public class ControllerEducacion {
     @Autowired
     private IEducacionService educServ;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @PostMapping("/new/educacion")
     public void agregarEducacion(@RequestBody Educacion educ){
         educServ.crearEducacion(educ);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @GetMapping ("/ver/educacion")
     @ResponseBody
     public List<Educacion> verEducaciones(){
         return educServ.verEducaciones();
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @DeleteMapping("/delete/educacion/{id}")
     public void borrarEducacion(@PathVariable Long id){
         educServ.borrarEducacion(id);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @PutMapping("/modificar/educacion")
     public void editarEducacion(@RequestBody Educacion educ){
         educServ.editarEducacion(educ);

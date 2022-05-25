@@ -26,20 +26,20 @@ public class ControllerSobreMi {
         sobremiServ.crearSobreMi(sobremi);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @GetMapping ("/ver/sobremi")
     @ResponseBody
     public List<SobreMi> verSobreMi(){
         return sobremiServ.verSobreMi();
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @DeleteMapping("/delete/sobremi/{id}")
     public void borrarSobreMi(@PathVariable Long id){
         sobremiServ.borrarSobreMi(id);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin
     @PutMapping("/modificar/sobremi")
     public void editarSobreMi(@RequestBody SobreMi sobremi){
         sobremiServ.editarSobreMi(sobremi);
